@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8XN0306L80"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8XN0306L80");
+    </script>
+
+    <link rel="icon" type="image/png" href="./assets/img3.png" />
+    <title>Om Karmele</title>
+    <!-- Font optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End font optimization -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="min-h-screen">
+    <div class="Background" id="BlackBirdsContainer">
+      <canvas id="Background"></canvas>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-40 transition-colors duration-300 nav-transparent"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#home" class="text-white text-2xl font-bold">
+              <span class="gradient-text">Om</span
+              ><span class="text-white">Karmele</span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-white hover:text-purple-400 transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-white hover:text-purple-400 transition"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="nav-link text-white hover:text-purple-400 transition"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-white hover:text-purple-400 transition"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-white hover:text-purple-400 transition"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-black bg-opacity-90 absolute w-full z-50"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-white hover:bg-purple-900 rounded-md"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-white hover:bg-purple-900 rounded-md"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 text-white hover:bg-purple-900 rounded-md"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 text-white hover:bg-purple-900 rounded-md"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-white hover:bg-purple-900 rounded-md"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 finisher-header hero-background"
+    >
+      <div id="bird-container"></div>
+
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+            url(&quot;assets/backthreenoite.webp&quot;);
+          z-index: -20;
+        "
+      ></div>
+
+      <div
+        id="shooting-star-container"
+        class="absolute inset-0 pointer-events-none z-10"
+      ></div>
+
+      <div class="absolute top-0 left-0 w-full h-full z-5">
+        <div
+          class="absolute top-0 left-1/4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"
+        ></div>
+        <div
+          class="absolute top-0 right-20 w-72 h-72 bg-purple-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"
+        ></div>
+        <div
+          class="absolute bottom-8 left-20 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I am a
+              <span class="gradient-text"> Full-Stack Developer</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 typewriter">
+              Creating incredible digital experiences.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#projects"
+                class="gradient-bg text-white px-6 pt-[14px] pb-[12px] rounded-full font-medium transition transform hover:-translate-y-1 shadow-lg hover:shadow-purple-900/50"
+                >My Projects</a
+              >
+              <a href="#contact" class="cta flex justify-center">
+                <span>Contact Me &nbsp;</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  height="18px"
+                  width="18px"
+                >
+                  <path
+                    d="M22.17,1.82l-1.05-.91c-1.21-1.21-3.17-1.21-4.38,0-.03,.03-1.88,2.44-1.88,2.44-1.14,1.2-1.14,3.09,0,4.28l1.16,1.46c-1.46,3.31-3.73,5.59-6.93,6.95l-1.46-1.17c-1.19-1.15-3.09-1.15-4.28,0,0,0-2.41,1.85-2.44,1.88-1.21,1.21-1.21,3.17-.05,4.33l1,1.15c1.15,1.15,2.7,1.78,4.38,1.78,7.64,0,17.76-10.13,17.76-17.76,0-1.67-.63-3.23-1.83-4.42ZM6.24,22c-1.14,0-2.19-.42-2.91-1.15l-1-1.15c-.41-.41-.43-1.08-.04-1.51,0,0,2.39-1.84,2.42-1.87,.41-.41,1.13-.41,1.55,0,.03,.03,2.04,1.64,2.04,1.64,.28,.22,.65,.28,.98,.15,4.14-1.58,7.11-4.54,8.82-8.81,.13-.33,.08-.71-.15-1,0,0-1.61-2.02-1.63-2.04-.43-.43-.43-1.12,0-1.55,.03-.03,1.87-2.42,1.87-2.42,.43-.39,1.1-.38,1.56,.08l1.05,.91c.77,.77,1.2,1.82,1.2,2.96,0,6.96-9.77,15.76-15.76,15.76Z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="mt-8 flex space-x-4">
+              <a
+                href="https://github.com/omkarmele10"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link social-link--github text-gray-400 transition transform hover:-translate-y-1"
+              >
+                <i class="fab fa-github text-2xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/om-karmele/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link social-link--linkedin text-gray-400 transition transform hover:-translate-y-1"
+              >
+                <i class="fab fa-linkedin text-2xl"></i>
+              </a>
+              <a
+                href="https://leetcode.com/u/omkarmele/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link social-link--leetcode text-gray-400 transition transform hover:-translate-y-1"
+              >
+                <img
+                  src="https://cdn.simpleicons.org/leetcode/FFA116"
+                  alt="LeetCode"
+                  class="w-6 h-6"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.geeksforgeeks.org/profile/omkumarku86t?tab=activity"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link social-link--gfg text-gray-400 transition transform hover:-translate-y-1"
+              >
+                <img
+                  src="https://cdn.simpleicons.org/geeksforgeeks/2F8D46"
+                  alt="GeeksforGeeks"
+                  class="w-6 h-6"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/om_karmele/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link social-link--instagram text-gray-400 transition transform hover:-translate-y-1"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center fade-in delay-1">
+            <div id="avatar-wrapper" class="relative w-64 h-64 md:w-80 md:h-80">
+              <div
+                id="circle-container"
+                class="absolute inset-0 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl floating z-10"
+              >
+                <div class="absolute inset-0 bg-purple-500 opacity-10"></div>
+                <!-- Optimized image with WebP and fallback -->
+                <picture>
+                  <img
+                    id="avatar-default"
+                    src="./assets/img3.png"
+                    alt="Om Karmele avatar"
+                    class="w-full h-full object-cover transition-transform duration-300"
+                    width="320"
+                    height="320"
+                  />
+                </picture>
+              </div>
+
+              <!-- <picture>
+                <source srcset="./assets/img1.png" type="image/webp" />
+                <img
+                  id="hover-image"
+                  src="./assets/img3.png"
+                  alt="Om Karmele avatar in PNG"
+                  class="absolute top-0 left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-300 z-20"
+                  width="320"
+                  height="320"
+                />
+              </picture> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20"
+      >
+        <a href="#about" class="text-gray-400 hover:text-purple-400 transition">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 about-bg-image">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            About <span class="gradient-text">Me</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            Learn more about me and my journey as a Computer Science graduate
+            and full-stack web developer
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center gap-10 fade-in delay-1"
+        >
+          <div class="md:w-1/3 flex justify-center">
+            <div class="relative group">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"
+              ></div>
+              <div class="relative glass-card rounded-lg p-1 w-64 h-64">
+                <!-- Image with lazy loading -->
+                <picture>
+                  <source
+                    srcset="
+                      https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80&fm=webp
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
+                    alt="Image of a laptop with code"
+                    class="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                    width="256"
+                    height="256"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <h3 class="text-2xl font-bold mb-4">Who am I?</h3>
+            <p class="text-gray-300 mb-6">
+              I am a B.Tech Computer Science graduate with strong skills in both
+              development and problem-solving. I have completed DSA and
+              full-stack web development, and I can take up end-to-end web
+              development projects. I am currently preparing for software
+              engineering roles with focused practice in DSA, competitive
+              programming, and system design.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <p class="text-gray-400">
+                  <span class="text-purple-400 font-medium">Name:</span> Om
+                  Karmele
+                </p>
+                <p class="text-gray-400">
+                  <span class="text-purple-400 font-medium">Age:</span> 22 years
+                </p>
+                <p class="text-gray-400">
+                  <span class="text-purple-400 font-medium">Experience:</span>
+                  1 years
+                </p>
+              </div>
+              <div>
+                <p class="text-gray-400">
+                  <span class="text-purple-400 font-medium">E-mail:</span>
+                  omk3743@gmail.com
+                </p>
+                <!-- <p class="text-gray-400">
+                  <span class="text-purple-400 font-medium">Phone:</span>
+                  (16) 99264-0814
+                </p> -->
+                <p class="text-gray-400">
+                  <span class="text-purple-400 font-medium">Freelance:</span>
+                  Available
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                class="gradient-bg text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition"
+                >Projects
+              </a>
+              <a
+                href="#contact"
+                class="border border-purple-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-purple-900 transition"
+                >Hire me</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 glow-background">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            My <span class="gradient-text">Skills</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            Technologies and tools I master and use daily
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mb-8 text-center md:text-left">
+          Web Development :-
+        </h3>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14">
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-html5 text-orange-400 text-xl"></i>
+            </div>
+            <span class="text-white">HTML5</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-css3-alt text-blue-400 text-xl"></i>
+            </div>
+            <span class="text-white">CSS3</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-js-square text-yellow-300 text-xl"></i>
+            </div>
+            <span class="text-white">JavaScript</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-react text-cyan-300 text-xl"></i>
+            </div>
+            <span class="text-white">React JS</span>
+          </div>
+
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-wind text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Tailwind CSS</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-2"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-node-js text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Node.js</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-server text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Express.js</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-database text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">MongoDB</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-2"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-network-wired text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">REST APIs</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-git-alt text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Git & GitHub</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-vial text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Postman</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-2"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-terminal text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">NPM</span>
+          </div>
+        </div>
+
+        <h3
+          class="text-2xl font-bold text-white mt-14 mb-8 text-center md:text-left"
+        >
+          Programming :-
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-2"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-code text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">C/C++</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-1"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-java text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Java</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fab fa-python text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">Python</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-2"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-code-branch text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">DSA</span>
+          </div>
+          <div
+            class="tech-item flex items-center p-4 glass-card rounded-lg fade-in delay-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-purple-900 rounded-lg mr-4"
+            >
+              <i class="fas fa-cubes text-purple-400 text-xl"></i>
+            </div>
+            <span class="text-white">OOP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-deep-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            My <span class="gradient-text">Projects</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            Some of the projects I worked on recently
+          </p>
+        </div>
+
+        <div class="projects-container relative">
+          <div class="projects-carousel-wrapper">
+            <div class="projects-carousel">
+              <!-- Project 1 -->
+              <div
+                class="project-card rounded-xl overflow-hidden glass-card card-hover"
+              >
+                <div class="relative overflow-hidden">
+                  <picture>
+                    <img
+                      src="assets/project1.png"
+                      alt="Steel infrastructure company website"
+                      class="w-full h-48 object-cover transition duration-500 hover:scale-110"
+                      loading="lazy"
+                      width="400"
+                      height="192"
+                    />
+                  </picture>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition flex items-end p-4"
+                  >
+                    <div class="text-white">
+                      <h3 class="text-xl font-bold">
+                        Steel Infrastructure Website
+                      </h3>
+                      <p class="text-gray-300">React, MERN Stack</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    Semi-Dynamic Steel Company Website
+                  </h3>
+                  <p class="text-gray-400 mb-4">
+                    A semi-dynamic website for a steel infrastructure company
+                    that builds heavy steel sheds and related industrial
+                    structures. Designed for clear service presentation, inquiry
+                    flow, and professional business branding.
+                  </p>
+                  <div class="flex space-x-2">
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >React</span
+                    >
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >MERN</span
+                    >
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >Semi-Dynamic</span
+                    >
+                  </div>
+                  <div class="mt-4 flex justify-between items-center">
+                    <a
+                      href="https://www.tomarengineering.in/"
+                      class="text-purple-400 hover:text-purple-300 transition"
+                      ><i class="fas fa-link mr-1"></i> Visit</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- project 2 -->
+              <div
+                class="project-card rounded-xl overflow-hidden glass-card card-hover"
+              >
+                <div class="relative overflow-hidden">
+                  <picture>
+                    <img
+                      src="assets/project2.png"
+                      alt="SPA mobile app landing page"
+                      class="w-full h-48 object-cover transition duration-500 hover:scale-110"
+                      loading="lazy"
+                      width="400"
+                      height="192"
+                    />
+                  </picture>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition flex items-end p-4"
+                  >
+                    <div class="text-white">
+                      <h3 class="text-xl font-bold">
+                        SPA Mobile App Landing Page
+                      </h3>
+                      <p class="text-gray-300">React, MERN Stack</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    SPA App Landing Page
+                  </h3>
+                  <p class="text-gray-400 mb-4">
+                    A modern landing page built for a SPA mobile application.
+                    Developed with React and created as part of a MERN stack
+                    workflow, focused on responsive layout, clean UI, and
+                    performance.
+                  </p>
+                  <div class="flex space-x-2">
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >React</span
+                    >
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >MERN</span
+                    >
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >Frontend</span
+                    >
+                  </div>
+                  <div class="mt-4 flex justify-between items-center">
+                    <a
+                      href="https://spa-app-landing-page.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-purple-400 hover:text-purple-300 transition"
+                      ><i class="fas fa-link mr-1"></i> Visit</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div
+                class="project-card rounded-xl overflow-hidden glass-card card-hover"
+              >
+                <div class="relative overflow-hidden">
+                  <picture>
+                    <img
+                      src="assets/project3.png"
+                      alt="Lawyer website clone"
+                      class="w-full h-48 object-cover transition duration-500 hover:scale-110"
+                      loading="lazy"
+                      width="400"
+                      height="192"
+                    />
+                  </picture>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition flex items-end p-4"
+                  >
+                    <div class="text-white">
+                      <h3 class="text-xl font-bold">Lawyer Website Clone</h3>
+                      <p class="text-gray-300">React, MERN Stack</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    WordPress Lawyer Site Clone
+                  </h3>
+                  <p class="text-gray-400 mb-4">
+                    A frontend clone of a WordPress lawyer website, built in
+                    React. This project follows MERN architecture practices and
+                    focuses on professional layout, responsive behavior, and
+                    clean component structure.
+                  </p>
+                  <div class="flex space-x-2">
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >React</span
+                    >
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >MERN</span
+                    >
+                    <span
+                      class="bg-purple-900 text-purple-300 text-xs px-2 py-1 rounded"
+                      >Frontend</span
+                    >
+                  </div>
+                  <div class="mt-4 flex justify-between items-center">
+                    <a
+                      href="https://your-voice-ruby.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-purple-400 hover:text-purple-300 transition"
+                      ><i class="fas fa-link mr-1"></i> Visit</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left button -->
+          <button
+            id="projects-prev"
+            class="projects-nav-btn"
+            aria-label="Previous project"
+          >
+            <!-- left arrow -->
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M15 18l-6-6 6-6" fill="white"></path>
+            </svg>
+          </button>
+
+          <!-- Right button -->
+          <button
+            id="projects-next"
+            class="projects-nav-btn"
+            aria-label="Next project"
+          >
+            <!-- right arrow -->
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M9 6l6 6-6 6" fill="white"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dots Pagination -->
+        <div class="flex justify-center items-center space-x-4 mt-8">
+          <!-- Previous button (Mobile) -->
+          <button
+            id="mobile-projects-prev"
+            class="mobile-carousel-nav-btn"
+            aria-label="Previous project"
+          >
+            <i class="fas fa-chevron-left text-purple-400"></i>
+          </button>
+          <!-- Dots container -->
+          <div
+            id="projects-dots"
+            class="flex justify-center items-center space-x-3"
+          >
+            <!-- Dots are generated by JavaScript -->
+          </div>
+          <!-- Next button (Mobile) -->
+          <button
+            id="mobile-projects-next"
+            class="mobile-carousel-nav-btn"
+            aria-label="Next project"
+          >
+            <i class="fas fa-chevron-right text-purple-400"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div
+          class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl"
+        ></div>
+        <div
+          class="absolute top-1/2 right-1/3 w-64 h-64 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-1/2 w-64 h-64 bg-purple-800 rounded-full mix-blend-multiply filter blur-3xl"
+        ></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Get in <span class="gradient-text">Touch</span>
+          </h2>
+          <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+          <p class="text-gray-400 max-w-3xl mx-auto">
+            Have a project in mind or want to work together? Send me a message!
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-10">
+          <div class="md:w-1/2">
+            <form id="contact-form" class="space-y-6" novalidate>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-gray-300 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 glass-card border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500"
+                    placeholder="Your name"
+                  />
+                  <p class="error-message text-red-400 text-sm mt-1 hidden">
+                    Please enter your name.
+                  </p>
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-300 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 glass-card border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500"
+                    placeholder="your@email.com"
+                  />
+                  <p class="error-message text-red-400 text-sm mt-1 hidden">
+                    Please enter a valid email.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <label for="subject" class="block text-gray-300 mb-2"
+                  >Subject</label
+                >
+                <!-- Custom Select -->
+                <div class="custom-select-wrapper relative">
+                  <div
+                    id="custom-select-trigger"
+                    class="w-full px-4 py-3 glass-card border border-gray-700 rounded-lg flex justify-between items-center text-gray-400"
+                  >
+                    <span id="custom-select-label"
+                      >Select the reason for contact</span
+                    >
+                    <i
+                      class="fas fa-chevron-down transition-transform duration-300"
+                    ></i>
+                  </div>
+                  <div
+                    id="custom-select-options"
+                    class="absolute w-full mt-2 rounded-lg overflow-hidden z-50 hidden"
+                  >
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Website creation
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      I need to update my current website
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Landing page for a marketing campaign
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Website for E-commerce / Online Store
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Professional presentation / media kit
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Social media design
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Custom quote
+                    </div>
+                    <div
+                      class="custom-option p-3 hover:bg-purple-900 transition duration-200"
+                    >
+                      Questions
+                    </div>
+                  </div>
+                </div>
+                <p class="error-message text-red-400 text-sm mt-1 hidden">
+                  Please select a subject.
+                </p>
+              </div>
+              <div>
+                <label for="message" class="block text-gray-300 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 glass-card border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-500"
+                  placeholder="Your message"
+                ></textarea>
+                <p class="error-message text-red-400 text-sm mt-1 hidden">
+                  Please write your message.
+                </p>
+              </div>
+              <button
+                type="submit"
+                class="gradient-bg text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition w-full"
+              >
+                Send Message
+              </button>
+              <!-- Success message (moved inside the form) -->
+              <div
+                id="success-message"
+                class="hidden p-4 glass-card border border-green-500 rounded-lg text-center text-green-300"
+              >
+                Message sent! I will get back to you soon. 🚀
+              </div>
+            </form>
+          </div>
+
+          <div class="md:w-1/2">
+            <div class="glass-card rounded-xl p-8 h-full">
+              <h3 class="text-2xl font-bold text-white mb-6">
+                Contact Information
+              </h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mr-4"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-white mb-1">
+                      Location
+                    </h4>
+                    <p class="text-gray-400">Bhopal , India</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mr-4"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-white mb-1">Email</h4>
+                    <p class="text-gray-400">omk3743@gmail.com</p>
+                  </div>
+                </div>
+
+                <!-- <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mr-4"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-medium text-white mb-1">Phone</h4>
+                    <p class="text-gray-400">(16) 99264-0814</p>
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-medium text-white mb-4">Services</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-center text-gray-400">
+                    <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                    UI/UX Design
+                  </li>
+                  <li class="flex items-center text-gray-400">
+                    <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                    Website Development
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="text-lg font-medium text-white mb-4">
+                  Social Media
+                </h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://github.com/omkarmele10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link social-link--github w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:bg-gray-700 transition"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/om-karmele/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link social-link--linkedin w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:bg-gray-700 transition"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="https://leetcode.com/u/omkarmele/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link social-link--leetcode w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:bg-gray-700 transition"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/leetcode/FFA116"
+                      alt="LeetCode"
+                      class="w-5 h-5"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="https://www.geeksforgeeks.org/profile/omkumarku86t?tab=activity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link social-link--gfg w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:bg-gray-700 transition"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/geeksforgeeks/2F8D46"
+                      alt="GeeksforGeeks"
+                      class="w-5 h-5"
+                      loading="lazy"
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/om_karmele/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link social-link--instagram w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-400 hover:bg-gray-700 transition"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-dark py-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <a href="#home" class="text-white text-2xl font-bold gradient-text"
+              >Om<span class="text-white">Karmele</span></a
+            >
+          </div>
+          <div class="text-gray-400 text-sm">
+            &copy; 2026 Om Karmele. All rights reserved.
+          </div>
+          <div class="fixed bottom-6 right-6 z-50">
+            <a
+              href="#home"
+              class="w-10 h-10 rounded-full glass-card flex items-center justify-center text-gray-300 hover:text-purple-400 transition"
+            >
+              <i class="fas fa-arrow-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./FlyBackground.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
